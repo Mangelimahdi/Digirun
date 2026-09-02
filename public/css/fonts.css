@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'IRANSansXLight';
+    font-style: normal;
+    src: url("/fonts/IRANSansXFaNum-Light.woff2")
+}
+
+@font-face {
+    font-family: "IRANSansXMedium";
+    font-style: normal;
+    src: url("/fonts/IRANSansXFaNum-Medium.woff2");
+}
+
+@font-face {
+    font-family: "IRANSansXRegular";
+    font-style: normal;
+    src: url("/fonts/IRANSansXFaNum-Regular.woff2");
+}

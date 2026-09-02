@@ -1,0 +1,22 @@
+.rmdp-container {
+    width: 100%;
+    margin: 0;
+}
+
+.rmdp-container input,
+.rmdp-container input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.rmdp-container input {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    color: var(--color-gray-300);
+    font-size: 0.875rem;
+}

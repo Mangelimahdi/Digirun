@@ -1,0 +1,127 @@
+    @import "tailwindcss";
+
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    @theme {
+            --font-IRANSansX: "IRANSansXMedium";
+            /* Light Mode */
+            --color-primary-100: #E6F0FF;
+            --color-primary-200: #B3D1FF;
+            --color-primary-300: #0062FF;
+            --color-primary-400: #0052CC;
+            --color-primary-500: #003D99;
+            /* Gray */
+            --color-gray-100: #F5F6FA;
+            --color-gray-200: #CCCCCC;
+            --color-gray-300: #8C8C8C;
+            --color-gray-400: #4D4D4D;
+            --color-gray-500: #1A1A1A;
+            /* Accent */
+            --color-success: #00B386;
+            --color-warning: #FFB800;
+            --color-error: #FF4D4F;
+            --color-info: #40A9FF;
+
+            /* Secondary / Blended */
+            --color-secondary-100: #D8CACD;
+            --color-secondary-200: #90A6DF;
+
+            --color-light-100: #F9FAFC;
+
+            --color-dark-100: #1F2937;
+            --color-dark-200: #111828;
+
+            --shadow-100: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+            --shadow-200: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+
+            --breakpoint-xs: 30rem;
+    }
+
+    .dark {
+            --color-primary-100: #133C80;
+            --color-primary-200: #1F5FCC;
+            --color-primary-300: #0052FF;
+            --color-primary-400: #4D94FF;
+            --color-primary-500: #80B3FF;
+            /* Gray */
+            --color-gray-100: #1A1A1A;
+            --color-gray-200: #2B2B2B;
+            --color-gray-300: #5E5E5E;
+            --color-gray-400: #9A9A9A;
+            --color-gray-500: #E6E6E6;
+
+            /* Accent */
+            --color-success: #33D6A6;
+            --color-warning: #FFD666;
+            --color-error: #FF7875;
+            --color-info: #69B1FF;
+            /* Secondary / Blended */
+            --color-secondary-100: #30292B;
+            --color-secondary-200: #6074A2;
+
+            --color-dark-100: #1F2937;
+            --color-dark-200: #111828;
+    }
+
+    * {
+            @apply !box-border;
+    }
+
+    html {
+            @apply !overflow-x-hidden
+    }
+
+    body {
+            @apply !overflow-x-hidden !font-IRANSansX text-right !box-border bg-light-100 dark:bg-dark-200 transition-colors duration-300;
+    }
+
+   
+    .swiper-button-disabled {
+            @apply opacity-50;
+    }
+
+    .swiper-pagination-bullet {
+            @apply !bg-gray-300 dark:bg-gray-500;
+    }
+
+    .swiper-pagination-bullet-active {
+            @apply !bg-primary-300;
+    }
+
+    @layer components {
+            .range-inputs-container {
+                    @apply relative
+            }
+
+            .range-inputs-container>.range-input {
+                    @apply pointer-events-none absolute appearance-none accent-primary-300 h-1.25 right-0 -top-1.25 w-full
+            }
+
+            .range-input::-webkit-slider-thumb {
+                    pointer-events: auto;
+                    cursor: pointer;
+            }
+
+            .range-input::-moz-range-thumb {
+                    pointer-events: auto;
+                    cursor: pointer;
+            }
+    }
+
+    @layer utilities {
+            @keyframes tab-fade {
+                    from {
+                            opacity: 0;
+                            transform: translateY(8px)
+                    }
+
+                    to {
+                            opacity: 1;
+                            transform: translateY(0);
+                    }
+            }
+
+            .animate-tab {
+                    animation: tab-fade 0.3s ease
+            }
+    }
