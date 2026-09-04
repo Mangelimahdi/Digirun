@@ -20,7 +20,11 @@ const Banner = () => {
                     el: "#pagination-banner",
                     clickable: true,
                 }}
-                spaceBetween={20}
+                loop
+                autoplay={{
+                    delay: 3000
+                }}
+                spaceBetween={25}
                 slidesPerView={1}
             >
                 <SwiperSlide>
