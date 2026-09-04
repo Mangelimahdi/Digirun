@@ -27,7 +27,7 @@ const RootLayout = () => {
                             }}
                         />
                         <Sidebar isOpen={isOpen} onClose={onClose} />
-                        <main id='content' className='relative mb-4 md:mb-12 px-2 xl:px-16 container mx-auto'>
+                        <main id='content' className='relative mb-4 md:mb-12 px-2 xl:px-16 mx-auto'>
                             <Topbar onToggle={toggle} />
                             <div>
                                 <Outlet />

@@ -14,16 +14,16 @@ const PopularCategories = () => {
         image: category.image
     }))
 
-    console.log(popularCategoriesData)
     return (
-        <div className='mb-4 md:mb-8 lg:mb-22'>
+        <div className='mb-8 lg:mb-22'>
             <SectionHeader
                 icon={BiCategory}
                 title="دسته بندی های"
                 highlight="محبوب"
+                className="mb-4 lg:mb-8"
                 showNavigation={false}
                 showButtonViewAll={false} />
-            <div className='flex items-center justify-center gap-4 sm:gap-8 lg:gap-32 lg:mx-16 '>
+            <div className='flex items-center justify-evenly flex-wrap gap-4 sm:gap-8 lg:gap-32 lg:mx-16 '>
                 {
                     popularCategoriesData?.map((category) => (
                         <Card key={category.id} {...category} />

@@ -16,8 +16,8 @@ const ProductCard = ({ id, title, images, price, rating, discount, variant, hove
                 ? <HeaderOfferProductCard productId={id} discount={discount} />
                 : <HeaderRateProdactCard rating={rating} />
             }
-            <Link to={`/products/${id}`} className='flex flex-col items-center border-b border-gray-300 dark:border-gray-500 pb-1.5 md:pb-3'>
-                <img src={`${images?.[0]}`} className={clsx('h-42 w-50 xs:w-36 xs:h-32 sm:h-36 sm:w-44 md:h-52 md:w-60 lg:w-full lg:h-full transition-all duration-300',
+            <Link to={`/products/${id}`} className='flex flex-col items-center border-b border-gray-300 dark:border-gray-500 pb-1.5 mt-1.5 md:pb-3'>
+                <img src={`${images?.[0]}`} className={clsx('h-42 w-50 object-cover xs:w-38 xs:h-32 sm:h-36 sm:w-44 md:h-52 md:w-60 lg:w-full lg:h-full transition-all duration-300 mb-1.5 ',
                     hoverEffect === "zoom" && 'group-hover:scale-105'
                 )} />
                 <span className='text-xs md:text-sm line-clamp-1 text-gray-400 dark:text-gray-500'>

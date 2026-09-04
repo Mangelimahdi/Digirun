@@ -2,6 +2,7 @@ import React from 'react'
 import NavigationButtons from './NavigationButtons'
 import { FaArrowLeft } from 'react-icons/fa'
 import { Link } from 'react-router'
+import clsx from 'clsx'
 
 const SectionHeader = ({
     prevButtonId,
@@ -9,11 +10,13 @@ const SectionHeader = ({
     icon: Icon,
     title,
     highlight,
+    className,
     showNavigation = true,
     showButtonViewAll = true,
 }) => {
     return (
-        <div className='flex items-center justify-between relative mb-2 lg:mb-4'>
+        <div className={clsx("flex items-center justify-between relative mb-2 lg:mb-4",
+            className)}>
             <h1 className='flex items-center gap-1 text-sm lg:text-2xl lg:gap-2 text-gray-500 dark:text-gray-500'>
                 <Icon className="text-xl" />
                 {title}
