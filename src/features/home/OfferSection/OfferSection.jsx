@@ -1,9 +1,9 @@
 import React from 'react'
-import ProductCard from '../../../components/common/ProductCard/ProductCard.jsx'
+import ProductCard from '../../../components/common/ProductCard/ProductCard'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import CountdownTimer from './components/CountDownTimer.jsx'
-import NavigationButtons from '../../../components/common/NavigationButtons.jsx'
+import CountDownTimer from './components/CountdownTimer.jsx'
+import NavigationButtons from '../../../components/common/NavigationButtons'
 import products from '../../../data/products.js'
 
 const OfferSection = () => {
@@ -45,7 +45,7 @@ const OfferSection = () => {
                 <SwiperSlide className='self-center !hidden lg:!flex justify-center'>
                     <div className='flex flex-col items-center gap-2 lg:gap-8'>
                         <h1 className='text-sm lg:text-2xl xl:text-4xl text-white font-bold text-center'>پیشنهاد شگفت انگیز</h1>
-                        <CountdownTimer />
+                        <CountDownTimer />
                     </div>
                 </SwiperSlide>
                 {
@@ -58,7 +58,7 @@ const OfferSection = () => {
                 }
             </Swiper>
             <div className='lg:hidden mt-2'>
-                <CountdownTimer />
+                <CountDownTimer />
             </div>
         </div >
     )

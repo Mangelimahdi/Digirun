@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CountdownTimer = () => {
+const CountDownTimer = () => {
     return (
         <div className='flex items-center justify-center gap-2'>
             <div className='bg-white py-1.5 px-2 rounded-sm text-sm lg:text-xl font-bold text-center'>3</div>
@@ -12,4 +12,4 @@ const CountdownTimer = () => {
     )
 }
 
-export default CountdownTimer
+export default CountDownTimer
