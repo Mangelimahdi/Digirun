@@ -7,11 +7,20 @@ import BackgroundOverlay from '../common/BackgroundOverlay';
 import Footer from '../common/Footer/Footer';
 import Bottombar from '../common/Bottombar/Bottombar';
 import { Toaster } from 'sonner';
+import useInitialLoader from '../../hooks/useInitialLoader';
+import InitialLoader from '../common/InitialLoader/InitialLoader';
 
 const RootLayout = () => {
     const { state: isOpen, toggle, onClose } = useToggle(false);
     const matchs = useMatches();
     const hideRootLayout = matchs.some((match) => match.pathname.includes('auth'));
+
+    const isLoading = useInitialLoader();
+
+    if (isLoading) {
+        return <InitialLoader />
+    }
+
     return (
         <>
             {
