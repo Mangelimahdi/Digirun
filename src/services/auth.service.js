@@ -1,16 +1,8 @@
-const sendOtp = async (phone) => {
-
-}
-const verifyOtp = async (phone, otp) => {
-
-}
-
-const getMe = async () => {
-
+const matchesIdentifier = (user, identifier = "") => {
+    const value = identifier.trim();
+    return ((user.id === value) || (user.phone === value));
 }
 
 export {
-    sendOtp,
-    verifyOtp,
-    getMe,
+    matchesIdentifier,
 }
