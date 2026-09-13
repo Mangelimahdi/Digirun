@@ -32,6 +32,11 @@ const useAuth = () => {
     const { state: users, setValue: setUsers } = useLocalStorage("users", []);
     const { state: user, setValue: setUser } = useLocalStorage('user', {});
 
+    useEffect(() => {
+        if (isOtpSent) {
+            otpRefs.current[0]?.focus()
+        }
+    }, [isOtpSent]);
 
     const handlePhoneChange = (event) => {
         const value = event.target.value;
@@ -79,6 +84,7 @@ const useAuth = () => {
         generateOtp();
         restart();
     }
+
 
     const handleResendOtp = async () => {
         restart();

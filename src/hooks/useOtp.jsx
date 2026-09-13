@@ -1,11 +1,11 @@
-import{ useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 
 const useOtp = () => {
     const [otp, setOtp] = useState(["", "", "", "", ""]);
     const otpRefs = useRef([]);
-    
+
     const handleOtpChange = (index, value) => {
-        if (!/^\d*$/.test(value)) return;
+        if (!/^\d{0,5}$/.test(value)) return;
         const newOtp = [...otp];
         newOtp[index] = value;
 
