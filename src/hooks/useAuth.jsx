@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import useCountDown from './useCountDown';
 import { useNavigate } from 'react-router';
 import { validate } from '../Validator';
