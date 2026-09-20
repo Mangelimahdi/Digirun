@@ -1,21 +1,14 @@
 import React from 'react'
-import useCount from '../../hooks/useCount';
 import CartProductImage from '../../features/cart/CartProductImage/CartProductImage';
 import { HiOutlineTruck } from "react-icons/hi2";
 import { HiOutlineShieldCheck } from "react-icons/hi2";
 import { TfiAngleLeft } from "react-icons/tfi";
-import CountProduct from '../../features/cart/ProductCount/ProductCount';
+import ProductCount from '../../features/cart/ProductCount/ProductCount';
 import CartHeader from '../../features/cart/CartHeader/CartHeader';
 import { BiTrash } from 'react-icons/bi';
 import ConfirmPurchase from '../../features/cart/ConfirmPurchase/ConfirmPurchase';
 
 const Cart = () => {
-    const {
-        count,
-        handlerIncrement,
-        handlerDecrement,
-        handleCountChange,
-    } = useCount();
     return (
         <div className='mb-4 lg:mb-22 flex flex-col lg:flex-row items-start gap-y-4 lg:gap-x-8'>
             <div className='w-full lg:w-3/4  bg-white dark:bg-dark-100 shadow-100 rounded-lg py-2 px-3 md:py-4 md:px-6'>
@@ -42,7 +35,7 @@ const Cart = () => {
                                 گارانتی 24 ماهه
                             </div>
                             <div className='text-gray-300 dark:text-gray-500 flex items-center gap-1 lg:gap-2 text-xs lg:text-sm'>
-                                <HiOutlineTruck className='size-5'/>
+                                <HiOutlineTruck className='size-5' />
                                 ارسال 3 روز کاری
                             </div>
                         </div>
@@ -52,7 +45,7 @@ const Cart = () => {
                             53,000,223
                             تومان
                         </div>
-                        <CountProduct count={count} handlerIncrement={handlerIncrement} handlerDecrement={handlerDecrement} handleCountChange={handleCountChange} />
+                        <ProductCount />
                         <span className='flex items-center sm:justify-end gap-1 text-primary-300 text-xs sm:text-sm md:text-base'>
                             انتقال به خرید بعدی
                             <TfiAngleLeft />

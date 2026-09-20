@@ -13,7 +13,6 @@ const useLocalStorage = (key, defaultValue) => {
 
     const setValue = (value) => {
         try {
-            setState(() => {
                 const currentValue = JSON.parse(localStorage.getItem(key)) ?? defaultValue
                 const newValue =
                     typeof value === "function"
@@ -21,8 +20,8 @@ const useLocalStorage = (key, defaultValue) => {
                         : value;
 
                 localStorage.setItem(key, JSON.stringify(newValue));
-                return newValue
-            });
+               setState(newValue)
+           
         } catch (error) {
             console.log("Error Setting LocalStorage Key:", key, error)
         }
