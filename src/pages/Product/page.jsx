@@ -1,5 +1,4 @@
-import React from 'react'
-
+import { useState } from 'react'
 import ProductFeatures from '../../features/product/ProductFeatures/ProductFeatures';
 import ProductGallery from '../../features/product/ProductGallery/ProductGallery';
 import ProductInfo from '../../features/product/ProductInfo/ProductInfo';
@@ -16,6 +15,7 @@ const Product = () => {
     const param = useParams();
     const productId = param.productId;
     const mainProduct = products.find((product) => product.id === Number(productId));
+    const [selectedColor, setSelectedColor] = useState(mainProduct?.colors?.[0]);
 
     return (
         <div className='mb-4 lg:mb-22'>
@@ -42,14 +42,23 @@ const Product = () => {
                                 />
                                 <ProductActions productId={mainProduct.id} />
                             </div>
-                            <ProductInfo product={mainProduct} />
-                            <ProductFeatures features={mainProduct.features} />
+                            <ProductInfo product={mainProduct}
+                                selectedColor={selectedColor}
+                                onColorChange={setSelectedColor}
+                            />
+                            <ProductFeatures
+                                features={mainProduct.features}
+                            />
                         </div>
                     </div>
                     <ProductServices />
                 </div>
                 <div className='w-full lg:w-1/4'>
-                    <ProductPurchase productId={mainProduct.id} price={mainProduct.price} />
+                    <ProductPurchase
+                        productId={mainProduct.id}
+                        price={mainProduct.price}
+                        selectedColor={selectedColor}
+                    />
                 </div>
             </div>
             <div>
