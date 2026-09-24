@@ -1,5 +1,5 @@
 
-export const getProductPrice = (price, discount) => {
+export const getProductPrice = (price = 0, discount) => {
     if (!discount?.active) {
         return {
             originalPrice: price,
@@ -8,15 +8,11 @@ export const getProductPrice = (price, discount) => {
         }
     }
 
-    let discountAmount = 0
+    const rawDiscount = discount.type === 'percentage'
+        ? price * (discount.value / 100)
+        : discount.value;
 
-    if (discount.type === 'percentage') {
-        discountAmount = price * (discount.value / 100);
-    }
-
-    if (discount.type === 'fixed') {
-        discountAmount = discount.value;
-    }
+    const discountAmount = Math.min(Math.floor(rawDiscount), price);
 
     const finalPrice = price - discountAmount;
 
