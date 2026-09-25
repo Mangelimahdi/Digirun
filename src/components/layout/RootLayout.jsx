@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet, useMatches } from 'react-router'
+import { Outlet, ScrollRestoration, useMatches } from 'react-router'
 import Topbar from './../common/Topbar/Topbar';
 import Sidebar from '../common/Sidebar/Sidebar';
 import useToggle from '../../hooks/useToggle';
@@ -23,6 +23,7 @@ const RootLayout = () => {
 
     return (
         <>
+            <ScrollRestoration />
             {
                 !hideRootLayout && (
                     <>
