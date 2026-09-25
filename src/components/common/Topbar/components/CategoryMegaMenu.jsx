@@ -29,7 +29,7 @@ const CategoryMegaMenu = () => {
 
             {
                 isOpen && categories.length > 0 && (
-                    <div className='absolute! top-7! px-4 py-2 right-0! bg-white dark:bg-dark-200 shadow-100 rounded-lg z-50 w-screen! max-w-5xl'>
+                    <div className='absolute! top-7! px-4 py-2 right-0! bg-white dark:bg-dark-200 shadow-100 rounded-lg z-60 w-screen! max-w-5xl'>
                         <div className='flex items-stretch max-h-[70vh]'>
                             <ul className='py-2 px-2 rounded-lg bg-gray-100 dark:bg-dark-100'>
                                 {
