@@ -35,7 +35,7 @@ const sidebarMenus = [
     {
         id: 6,
         title: "تماس با ما",
-        href: "/contactus",
+        href: "/contact-us",
         Icon: BiPhone
     },
     {

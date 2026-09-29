@@ -19,7 +19,7 @@ const FooterMenus = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className='text-gray-300 dark:text-gray-400 text-sm md:text-base hover:text-primary-300 transition-colors duration-300'>
+                    <Link to="/contact-us" className='text-gray-300 dark:text-gray-400 text-sm md:text-base hover:text-primary-300 transition-colors duration-300'>
                         تماس با ما
                     </Link>
                 </li>
