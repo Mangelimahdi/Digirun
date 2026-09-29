@@ -15,6 +15,7 @@ import Profile from "./features/account/Profile/Profile";
 import AuthLayout from "./features/auth/layout/AuthLayout";
 import Cart from "./pages/Cart/page";
 import NotFound from "./pages/NotFound/page";
+import ContactUs from "./pages/ContactUs/page";
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path: 'cart',
                 element: <Cart />
+            },
+            {
+                path: 'contact-us',
+                element: <ContactUs />
             },
             {
                 path: '*',
