@@ -29,7 +29,7 @@ const sidebarMenus = [
     {
         id: 5,
         title: "درباره ما",
-        href: "/aboutus",
+        href: "/about-us",
         Icon: MdOutlineWarningAmber
     },
     {
