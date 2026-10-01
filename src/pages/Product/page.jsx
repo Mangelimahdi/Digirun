@@ -10,15 +10,40 @@ import ProductServices from '../../features/product/ProductServices/ProductServi
 import ProductPurchase from '../../features/product/ProductPurchase/ProductPurchase';
 import RelatedProducts from '../../features/product/RelatedProducts/RelatedProducts';
 import ProductsDetails from '../../features/product/ProductDetails/ProductsDetails';
+import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb';
+import categories from '../../data/categories';
+import { IoHomeOutline } from "react-icons/io5";
 
 const Product = () => {
     const param = useParams();
     const productId = param.productId;
     const mainProduct = products.find((product) => product.id === Number(productId));
     const [selectedColor, setSelectedColor] = useState(mainProduct?.colors?.[0]);
+    const mainCategory = categories.find(category => category.id === mainProduct.categoryId);
+
+    const breadcrumbs = [
+        {
+            icon: IoHomeOutline,
+            title: "خانه",
+            path: "/",
+        },
+        {
+            title: "محصولات",
+            path: "/products"
+        },
+        {
+            title: mainCategory.title,
+            path: `/categories/${mainCategory.slug}`
+        },
+        {
+            title: mainProduct.title
+        }
+    ]
+
 
     return (
         <div className='mb-4 lg:mb-22'>
+            < Breadcrumb breadcrumbs={breadcrumbs} />
             <div className='flex flex-col lg:items-start lg:flex-row gap-4 lg:mb-22'>
                 <div className='bg-white dark:bg-dark-100 py-2 px-3 md:py-4 md:px-6 shadow-100 lg:w-3/4 rounded-lg'>
                     <div className='flex flex-col lg:flex-row gap-x-5 mb-5'>
