@@ -28,7 +28,7 @@ const TopbarMenu = ({ onToggle }) => {
                         </Link>
                     </li>
                     <li>
-                        <Link to='/' className='relative flex items-center after:absolute after:w-0 after:h-0.5 after:rounded-full after:right-1/2 after:translate-x-1/2 after:-bottom-1.5 after:bg-primary-300 hover:after:w-full hover:after:h-0.5 after:transition-[width] after:duration-300'>
+                        <Link to='/about-us' className='relative flex items-center after:absolute after:w-0 after:h-0.5 after:rounded-full after:right-1/2 after:translate-x-1/2 after:-bottom-1.5 after:bg-primary-300 hover:after:w-full hover:after:h-0.5 after:transition-[width] after:duration-300'>
                             درباره ما
                         </Link>
                     </li>
