@@ -9,11 +9,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
 import { ThemeProvider } from './Contexts/ThemeProvider.jsx';
+import CartProvider from './Contexts/CartProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <CartProvider>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </CartProvider>
   </StrictMode>,
 )
