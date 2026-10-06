@@ -1,14 +1,12 @@
 import React from 'react'
 import { BiShoppingBag } from 'react-icons/bi'
 import { Link } from 'react-router'
-import useLocalStorage from '../../../../hooks/useLocalStorage'
 import clsx from 'clsx'
 import useCart from '../../../../hooks/useCart'
 
 const CartButton = () => {
-    // const { state: cart } = useLocalStorage('cart', []);
     const {totalItemsCount}=useCart();
-console.log(totalItemsCount)
+    
     return (
         <Link to={'/cart'} className={clsx('p-2 border border-gray-200 dark:border-gray-400 rounded-full cursor-pointer hidden md:block relative transition-all duration-300',
             totalItemsCount> 0 && "bg-primary-300 "

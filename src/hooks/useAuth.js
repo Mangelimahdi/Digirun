@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import useCountDown from './useCountDown';
+import useCountDown from './useCountDown.jsx';
 import { useNavigate } from 'react-router';
-import { validate } from '../Validator';
-import { sendOtpSchema, verifyOtpSchema } from '../Validator/auth';
+import { validate } from '../Validator/index.js';
+import { sendOtpSchema, verifyOtpSchema } from '../Validator/auth.js';
 import { toast } from 'sonner';
 import useOtp from './useOtp.jsx';
 import useLocalStorage from './useLocalStorage.jsx';
@@ -127,7 +127,7 @@ const useAuth = () => {
                 sendOtp();
             }
         } catch (err) {
-            console.log(err)
+            toast.error(err)
         }
     }
 
