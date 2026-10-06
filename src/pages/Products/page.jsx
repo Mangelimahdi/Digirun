@@ -5,7 +5,7 @@ import ProductCard from '../../components/common/ProductCard/ProductCard';
 import { GrSort } from 'react-icons/gr';
 import { FaFilter } from 'react-icons/fa6';
 import products from '../../data/products.js';
-import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.jsx';
+import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb';
 import { IoHomeOutline } from "react-icons/io5";
 
 const Products = () => {
