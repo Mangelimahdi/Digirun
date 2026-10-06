@@ -1,9 +1,9 @@
 
 import { useState } from "react"
-import ArticlesTab from './tabs/ArticlesTab.jsx';
-import BrandsTab from './tabs/BrandsTab.jsx';
+import ArticlesTab from './tabs/ArticlesTab';
+import BrandsTab from './tabs/BrandsTab';
 import categories from '../../../data/categories.js';
-import CategoryTabs from "./components/CategoryTabs.jsx";
+import CategoryTabs from "./components/CategoryTabs";
 import AccordionProvider from "../../../Contexts/Accordion/AccordionProvider";
 import ProductsTab from "./tabs/ProductsTab";
 

@@ -2,7 +2,7 @@ import React from 'react'
 import ProductCard from '../../../components/common/ProductCard/ProductCard'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import CountDownTimer from './components/CountdownTimer.jsx'
+import CountDownTimer from './components/CountdownTimer'
 import NavigationButtons from '../../../components/common/NavigationButtons'
 import products from '../../../data/products.js'
 

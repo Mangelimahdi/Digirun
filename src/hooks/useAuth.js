@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import useCountDown from './useCountDown.jsx';
+import useCountDown from './useCountDown';
 import { useNavigate } from 'react-router';
 import { validate } from '../Validator/index.js';
 import { sendOtpSchema, verifyOtpSchema } from '../Validator/auth.js';
 import { toast } from 'sonner';
-import useOtp from './useOtp.jsx';
-import useLocalStorage from './useLocalStorage.jsx';
+import useOtp from './useOtp';
+import useLocalStorage from './useLocalStorage';
 import { matchesIdentifier } from '../services/auth.service.js';
 
 const useAuth = () => {

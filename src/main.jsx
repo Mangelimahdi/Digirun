@@ -8,8 +8,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
-import { ThemeProvider } from './Contexts/ThemeProvider.jsx';
-import CartProvider from './Contexts/CartProvider.jsx';
+import { ThemeProvider } from './Contexts/ThemeProvider';
+import CartProvider from './Contexts/CartProvider';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
