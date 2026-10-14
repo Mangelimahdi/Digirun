@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React, { useEffect, useRef, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa'
-import { FaPlus } from "react-icons/fa6";
 
 const EditableField = ({ value, label, children, onChange, placeholder }) => {
   const [isEditing, setIsEditing] = useState(false);
