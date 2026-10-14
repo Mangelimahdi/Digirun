@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, redirect } from "react-router";
 import RootLayout from "./components/layout/RootLayout";
 import Home from "./pages/Home/page";
 import Categories from "./pages/Categories/page";
@@ -60,6 +60,12 @@ const router = createBrowserRouter([
                 element: <NotFound />
             },
             {
+                loader: () => {
+                    const user = JSON.parse(localStorage.getItem("user"));
+                    if (!user) {
+                        return redirect("/auth")
+                    }
+                },
                 path: "account",
                 element: <AccountLayout />,
                 children: [

@@ -1,13 +1,4 @@
 
-
-export const initialProfileState = {
-    name: "",
-    phone: "",
-    email: "",
-    password: "",
-    birthDate: null
-}
-
 const profileReducer = (state, action) => {
     switch (action.type) {
         case "UPDATE_FIELD": {
@@ -17,7 +8,7 @@ const profileReducer = (state, action) => {
             }
         }
         default: {
-            return state
+            return state;
         }
     }
 }
