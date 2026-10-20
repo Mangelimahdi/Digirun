@@ -75,7 +75,7 @@
             @apply !overflow-x-hidden !font-IRANSansX text-right !box-border bg-light-100 dark:bg-dark-200 transition-colors duration-300;
     }
 
-   
+
     .swiper-button-disabled {
             @apply opacity-50;
     }
@@ -86,6 +86,16 @@
 
     .swiper-pagination-bullet-active {
             @apply !bg-primary-300;
+    }
+
+    /* Search ScrollBar */
+    .search-scrollbar {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+    }
+
+    .search-scrollbar::-webkit-scrollbar {
+            display: none;
     }
 
     @layer components {
