@@ -10,7 +10,7 @@ const ProductImageModal = ({
 }) => {
     return (
         <>{isOpen &&
-            <div className='fixed overflow-hidden z-50! inset-0 rounded-lg m-auto h-[80vh] w-full max-w-2xl bg-white dark:bg-dark-100' onClick={(event) => event.stopPropagation()}>
+            <div className='fixed overflow-hidden z-80! inset-0 rounded-lg m-auto h-[80vh] w-full max-w-2xl bg-white dark:bg-dark-100' onClick={(event) => event.stopPropagation()}>
                 <div className='flex items-center justify-between p-5 text-gray-400 dark:text-gray-500'>
                     <span>
                         {title}
